@@ -1,9 +1,9 @@
 package org.api.api.model;
 
+import lombok.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Pattern;
-import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.index.Indexed;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -17,9 +17,11 @@ import java.util.Collection;
 @AllArgsConstructor
 @Document
 public class User {
+    /////////////////////////////////////////////////////////////////
     @Id
     private String id;
 
+    /////////////////////////////////////////////////////////////////
     @NotBlank(message = "Name is required")
     private String name;
 
