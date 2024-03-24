@@ -11,11 +11,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.ArrayList;
 import java.util.Collection;
 
-
 @Data // getters, setters, toString, equals, and hashCode methods.
 @NoArgsConstructor
 @AllArgsConstructor
 @Document
+
 public class User {
     /////////////////////////////////////////////////////////////////
     @Id
@@ -24,18 +24,15 @@ public class User {
     /////////////////////////////////////////////////////////////////
     @NotBlank(message = "Name is required")
     private String name;
-
-    /////////////////////////////////////////////////////////////////
-    @NotBlank(message = "Email is required")
-    @Indexed(unique = true)
-    private String email;
-
-
     /////////////////////////////////////////////////////////////////
     @NotBlank(message = "Username is required")
     @Indexed(unique = true)
     private String username;
 
+    /////////////////////////////////////////////////////////////////
+    @NotBlank(message = "Email is required")
+    @Indexed(unique = true)
+    private String email;
 
     /////////////////////////////////////////////////////////////////
     @NotBlank(message = "Password is required")
